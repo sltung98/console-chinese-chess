@@ -20,15 +20,15 @@ public class Adviser extends Chess {
     private Pair<Character, List<Integer>> createAdviser(boolean isFirstMove, int number) {
         if (number == 1) {
             if (isFirstMove) {
-                return new Pair('仕', Arrays.asList(7, 10));
+                return new Pair('\u4ED5', Arrays.asList(7, 10));
             } else {
-                return new Pair('士', Arrays.asList(7, 1));
+                return new Pair('\u58EB', Arrays.asList(7, 1));
             }
         } else if (number == 2) {
             if (isFirstMove) {
-                return new Pair('仕', Arrays.asList(11, 10));
+                return new Pair('\u4ED5', Arrays.asList(11, 10));
             } else {
-                return new Pair('士', Arrays.asList(11, 1));
+                return new Pair('\u58EB', Arrays.asList(11, 1));
             }
         } else {
             return null;

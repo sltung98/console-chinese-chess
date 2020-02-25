@@ -13,15 +13,15 @@ public class Cannon extends Chess {
     private Pair<Character, List<Integer>> createCannon(boolean isFirstMove, int number) {
         if (number == 1) {
             if (isFirstMove) {
-                return new Pair('炮', Arrays.asList(3, 8));
+                return new Pair('\u70AE', Arrays.asList(3, 8));
             } else {
-                return new Pair('砲', Arrays.asList(3, 3));
+                return new Pair('\u7832', Arrays.asList(3, 3));
             }
         } else if (number == 2) {
             if (isFirstMove) {
-                return new Pair('炮', Arrays.asList(15, 8));
+                return new Pair('\u70AE', Arrays.asList(15, 8));
             } else {
-                return new Pair('砲', Arrays.asList(15, 3));
+                return new Pair('\u7832', Arrays.asList(15, 3));
             }
         } else {
             return null;

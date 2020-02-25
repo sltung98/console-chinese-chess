@@ -24,15 +24,15 @@ public class Horse extends Chess {
     private Pair<Character, List<Integer>> createHorse(boolean isFirstMove, int number) {
         if (number == 1) {
             if (isFirstMove) {
-                return new Pair('傌', Arrays.asList(3, 10));
+                return new Pair('\u508C', Arrays.asList(3, 10));
             } else {
-                return new Pair('馬', Arrays.asList(3, 1));
+                return new Pair('\u99AC', Arrays.asList(3, 1));
             }
         } else if (number == 2) {
             if (isFirstMove) {
-                return new Pair('傌', Arrays.asList(15, 10));
+                return new Pair('\u508C', Arrays.asList(15, 10));
             } else {
-                return new Pair('馬', Arrays.asList(15, 1));
+                return new Pair('\u99AC', Arrays.asList(15, 1));
             }
         } else {
             return null;

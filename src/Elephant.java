@@ -20,15 +20,15 @@ public class Elephant extends Chess {
     private Pair<Character, List<Integer>> createElephant(boolean isFirstMove, int number) {
         if (number == 1) {
             if (isFirstMove) {
-                return new Pair('相', Arrays.asList(5, 10));
+                return new Pair('\u76F8', Arrays.asList(5, 10));
             } else {
-                return new Pair('象', Arrays.asList(5, 1));
+                return new Pair('\u8C61', Arrays.asList(5, 1));
             }
         } else if (number == 2) {
             if (isFirstMove) {
-                return new Pair('相', Arrays.asList(13, 10));
+                return new Pair('\u76F8', Arrays.asList(13, 10));
             } else {
-                return new Pair('象', Arrays.asList(13, 1));
+                return new Pair('\u8C61', Arrays.asList(13, 1));
             }
         } else {
             return null;

@@ -135,10 +135,11 @@ public class Game {
                 enterMoveChoice(player, playerName);
             }
         } while (choice != 0 && choice != 1);
-
-        player.getChessList().get(chessChoice - 1).move(player);
+        
+        player.getChessList().get(chessChoice - 1).moveWithoutDisplay(player);
         player.updateChessInformation(chessChoice - 1, moveChoice - 1);
         player.detectCheckMate();
+
         if (isEnd) {
             declareWinner(playerName);
         } else {

@@ -13,15 +13,15 @@ public class Chariot extends Chess {
     private Pair<Character, List<Integer>> createChariot(boolean isFirstMove, int number) {
         if (number == 1) {
             if (isFirstMove) {
-                return new Pair('俥', Arrays.asList(1, 10));
+                return new Pair('\u4FE5', Arrays.asList(1, 10));
             } else {
-                return new Pair('車', Arrays.asList(1, 1));
+                return new Pair('\u8ECA', Arrays.asList(1, 1));
             }
         } else if (number == 2) {
             if (isFirstMove) {
-                return new Pair('俥', Arrays.asList(17, 10));
+                return new Pair('\u4FE5', Arrays.asList(17, 10));
             } else {
-                return new Pair('車', Arrays.asList(17, 1));
+                return new Pair('\u8ECA', Arrays.asList(17, 1));
             }
         } else {
             return null;

@@ -7,6 +7,8 @@ public class ChessBoard {
     private static int leftBound = 1;
     private static int upperBound = 1;
     private static int lowerBound = 10;
+    private static char emptySpace = '\u53E3';
+    private static char specialEmptySpace = '\u3007';
 
     public static char[][] getBoard() {
         return board;
@@ -34,9 +36,9 @@ public class ChessBoard {
             for (int i = 0; i < board.length; i++) {
                 if (j % 2 != 0) {
                     if (i == 5 || i == 6) {
-                        board[i][j] = '〇';
+                        board[i][j] = specialEmptySpace;
                     } else {
-                        board[i][j] = '口';
+                        board[i][j] = emptySpace;
                     }
                 } else {
                     board[i][j] = '-';
@@ -46,14 +48,14 @@ public class ChessBoard {
                         board[i][j] = (char) ('A' + count);
                         count++;
                     } else {
-                        board[i][j] = '―';
+                        board[i][j] = '\u2015';
                     }
                 } else if (j == 0) {
                     board[i][j] = (char) (i - 1 + '0');
                 }
                 if (i == 2 || i == 3 || i == 8 || i == 9) {
                     if (j == 7 || j == 9 || j == 11) {
-                        board[i][j] = '〇';
+                        board[i][j] = specialEmptySpace;
                     }
                 }
             }
@@ -74,10 +76,10 @@ public class ChessBoard {
         }
         board[5][18] = ' ';
         board[6][18] = ' ';
-        board[5][19] = '楚';
-        board[5][20] = '河';
-        board[6][19] = '漢';
-        board[6][20] = '界';
+        board[5][19] = '\u695A';
+        board[5][20] = '\u6CB3';
+        board[6][19] = '\u6F22';
+        board[6][20] = '\u754C';
     }
 
     protected static void printBoard() {
@@ -124,13 +126,13 @@ public class ChessBoard {
 
         if (Math.abs((newyCoordinate - currentyCoordinate)) ==
                 Math.abs(newxCoordinate - currentxCoordinate)) {
-            if (board[midPointyCoordinate][currentxCoordinate] == '口' ||
-                    board[midPointyCoordinate][currentxCoordinate] == '〇') {
+            if (board[midPointyCoordinate][currentxCoordinate] == emptySpace ||
+                    board[midPointyCoordinate][currentxCoordinate] == specialEmptySpace) {
                 return false;
             }
         } else {
-            if (board[currentyCoordinate][midPointxCoordinate] == '口' ||
-                    board[currentyCoordinate][midPointxCoordinate] == '〇') {
+            if (board[currentyCoordinate][midPointxCoordinate] == emptySpace ||
+                    board[currentyCoordinate][midPointxCoordinate] == specialEmptySpace) {
                 return false;
             }
         }
@@ -145,8 +147,8 @@ public class ChessBoard {
         int currentyCoordinate = currentCoordinate.getyCoordinate();
         int midPointyCoordinate = (newyCoordinate + currentyCoordinate) / 2;
         int midPointxCoordinate = (newxCoordinate + currentxCoordinate) / 2;
-        if (board[midPointyCoordinate][midPointxCoordinate] == '口' ||
-                board[midPointyCoordinate][midPointxCoordinate] == '〇') {
+        if (board[midPointyCoordinate][midPointxCoordinate] == emptySpace ||
+                board[midPointyCoordinate][midPointxCoordinate] == specialEmptySpace) {
             return false;
         }
         return true;
@@ -185,14 +187,14 @@ public class ChessBoard {
     public static void eraseChess(int x, int y) {
         if (y == 1 || y == 2 || y == 3 || y == 8 || y == 9 || y == 10) {
             if (x == 7 || x == 9 || x == 11) {
-                board[y][x] = '〇';
+                board[y][x] = specialEmptySpace;
             } else {
-                board[y][x] = '口';
+                board[y][x] = emptySpace;
             }
         } else if (y == 5 || y == 6) {
-            board[y][x] = '〇';
+            board[y][x] = specialEmptySpace;
         } else {
-            board[y][x] = '口';
+            board[y][x] = emptySpace;
         }
     }
 

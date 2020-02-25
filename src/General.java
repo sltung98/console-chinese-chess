@@ -20,9 +20,9 @@ public class General extends Chess {
 
     private Pair<Character, List<Integer>> createGeneral(boolean isFirstMove) {
         if (isFirstMove) {
-            return new Pair('帥', Arrays.asList(9, 10));
+            return new Pair('\u5E25', Arrays.asList(9, 10));
         } else {
-            return new Pair('將', Arrays.asList(9, 1));
+            return new Pair('\u5C07', Arrays.asList(9, 1));
         }
     }
 

@@ -16,30 +16,30 @@ public class Soldier extends Chess {
         if (!isFirstMove) {
             switch (number) {
                 case 1:
-                    return new Pair('卒', Arrays.asList(1, 4));
+                    return new Pair('\u5352', Arrays.asList(1, 4));
                 case 2:
-                    return new Pair('卒', Arrays.asList(5, 4));
+                    return new Pair('\u5352', Arrays.asList(5, 4));
                 case 3:
-                    return new Pair('卒', Arrays.asList(9, 4));
+                    return new Pair('\u5352', Arrays.asList(9, 4));
                 case 4:
-                    return new Pair('卒', Arrays.asList(13, 4));
+                    return new Pair('\u5352', Arrays.asList(13, 4));
                 case 5:
-                    return new Pair('卒', Arrays.asList(17, 4));
+                    return new Pair('\u5352', Arrays.asList(17, 4));
                 default:
                     return null;
             }
         } else {
             switch (number) {
                 case 1:
-                    return new Pair('兵', Arrays.asList(1, 7));
+                    return new Pair('\u5175', Arrays.asList(1, 7));
                 case 2:
-                    return new Pair('兵', Arrays.asList(5, 7));
+                    return new Pair('\u5175', Arrays.asList(5, 7));
                 case 3:
-                    return new Pair('兵', Arrays.asList(9, 7));
+                    return new Pair('\u5175', Arrays.asList(9, 7));
                 case 4:
-                    return new Pair('兵', Arrays.asList(13, 7));
+                    return new Pair('\u5175', Arrays.asList(13, 7));
                 case 5:
-                    return new Pair('兵', Arrays.asList(17, 7));
+                    return new Pair('\u5175', Arrays.asList(17, 7));
                 default:
                     return null;
             }
